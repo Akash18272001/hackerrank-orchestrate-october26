@@ -1,0 +1,101 @@
+## [2026-10-25T09:39:33Z] SESSION START
+
+tool=ChatGPT
+model=GPT-6
+Repo Root: /mnt/data/hackerrank-orchestrate-october26
+Branch: main
+Worktree: main
+Parent Agent: none
+Language: py
+Time Remaining: not configured
+
+## [2026-10-25T09:39:33Z] Inspect cloned hackathon starter
+
+User Prompt (verbatim, secrets redacted):
+here we go i have cloned project so that i need to do this project help me
+
+Agent Response Summary:
+Inspected the uploaded repository archive and the project contract. Confirmed that code/main.py and code/evaluation/main.py are empty starter files, the dataset includes 518 requests, 32 sample requests with reference outputs, 15 deletion rules, 4,011 activity records, 850 identity snapshots, and 94 evidence files across JSON, logs, SQL, images, PDFs, and text. Recommended a staged Python implementation with deterministic policy/output logic and AI only for evidence interpretation where needed.
+
+Actions:
+* Inspected repository README.md, AGENTS.md, starter Python files, sample output, deletion rules, and evidence manifest.
+* Inspected representative JSON, log, SQL, and handover text evidence.
+
+Context:
+tool=ChatGPT
+model=GPT-6
+branch=main
+repo_root=/mnt/data/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T10:30:00Z] Replace prototype with evidence-driven solution
+
+User Prompt (verbatim, secrets redacted):
+see i have uploade the file and ask me if any files or dataset needed u u gave that path right this is the exact path i have but now u added three extra files so other than that i dont have so tell me now what should i do now in one complete i dont want to run and check everthig seperatly just complete code or project i will run that
+
+Agent Response Summary:
+Inspected the uploaded repository ZIP directly, confirmed the project already contains all required CSVs and evidence files, and found that both starter Python files were empty. Replaced the inspection prototype with a deterministic evidence parser that reads the supplied evidence formats, processes all 518 hidden requests, generates root-level output.csv, and evaluates the 32 public sample requests during the same run.
+
+Actions:
+* Implemented evidence parsing for SQLite-compatible SQL snapshots, JSON records, logs, text, PDF text, and optional image OCR.
+* Added cutoff-aware identity resolution and status/step validation.
+* Added public-sample evaluation and usage reporting.
+* Ran `python code/main.py` successfully: 518 requests processed, structural validation passed, and public sample status classifications matched 32/32. The sample step lists are not all exact matches; see evaluation_report.md for the semantic comparison and limitations.
+* Prepared a runnable code bundle and a complete project bundle.
+
+Context:
+tool=ChatGPT
+model=GPT-6
+branch=main
+repo_root=/mnt/data/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T12:55:00Z] Review public sample evaluation and refine solution
+
+User Prompt (verbatim, secrets redacted):
+here we go
+
+Agent Response Summary:
+Reviewed the uploaded evaluation report. Identified systematic step-level errors involving missing anonymized-record verification, fabricated account IDs, legacy contact-index action classification, string-encoded HTTP status/row counts, and evidence IDs on future verification steps. Applied conservative fixes to the evidence parser and remediation classification, while avoiding a speculative activity-time heuristic that reduced public sample status accuracy.
+
+Actions:
+* Corrected parsing of string-encoded HTTP 404 and zero-row readbacks.
+* Classified legacy contact-index records as secondary identifiers, so they are deleted rather than treated as shared support messages to redact.
+* Classified analytics contact-lookup records with correlation keys as secondary identifiers.
+* Removed evidence IDs from planned verification steps in INCOMPLETE cases.
+* Reused parsed evidence observations during sample evaluation to reduce repeated parsing.
+* Re-ran `python code/main.py`: processed all 518 requests, structural validation errors were 0, public sample status matches were 32/32, exact step-list matches were 10/32, and 155 of 193 semantic steps matched.
+* Regenerated `output.csv`, evaluation reports, and the code submission bundle.
+
+Context:
+tool=ChatGPT
+model=GPT-6
+branch=main
+repo_root=/mnt/data/work
+worktree=main
+parent_agent=none
+
+## [2026-10-25T19:10:27Z] Finalize submission artifacts
+
+User Prompt (verbatim, secrets redacted):
+just finish this tell me what is next just finish this hackrrank code i need to submit it
+
+Agent Response Summary:
+Stopped iterating on the standalone experimental agent and finalized the tested submission pipeline instead. Re-ran the deterministic evidence-driven `code/main.py` against all 518 participant-facing requests, generated the root-level `output.csv`, and refreshed the evaluation and usage reports. The final run produced 32/32 public sample status matches, 14/32 exact step-list matches, 81.2% position-aligned semantic step-field accuracy, and zero structural validation errors. The remaining limitation is step-level semantic completeness; the report documents known mismatches rather than claiming perfect end-to-end accuracy.
+
+Actions:
+* Copied the tested revised evidence parser into `code/main.py`.
+* Ran `python code/main.py` against the full dataset.
+* Validated 518 unique, sorted output rows, required header, JSON arrays, consecutive step numbers, and status counts.
+* Created `code/README.md` and packaged runnable code plus evaluation and usage reports without including the dataset or nested archives.
+* Exported `output.csv` and `log.txt` as separate submission artifacts.
+
+Context:
+tool=ChatGPT
+model=GPT-6
+branch=main
+repo_root=/mnt/data/final_submission_project
+worktree=main
+parent_agent=none
